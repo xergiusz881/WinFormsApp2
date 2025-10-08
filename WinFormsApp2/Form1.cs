@@ -6,5 +6,11 @@ namespace WinFormsApp2
         {
             InitializeComponent();
         }
+
+        private void buttonClick(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            button.Text = "x";
+        }
     }
 }
