@@ -6,17 +6,24 @@ namespace WinFormsApp2
         public Form1()
         {
             InitializeComponent();
+            panel1.Text = "Teraz gra: " + player.ToString();
         }
 
         private void buttonClick(object sender, EventArgs e)
         {
             Button button = (Button)sender;
             button.Text = player.ToString();
-            if (player == 'x')
-                player = 'o' ;
+             if (player == 'x')
+            {
+                player = 'o';
+            }
             else
+            { 
                 player = 'x';
+            }
             button.Enabled = false;
+            panel1.Text = "Teraz gra: " + player.ToString(); 
+            
         }
     }
 }
