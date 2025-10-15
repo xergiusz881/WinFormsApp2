@@ -39,7 +39,9 @@
             button7 = new Button();
             button8 = new Button();
             button9 = new Button();
+            currentplayerLabel = new Label();
             tableLayoutPanel1.SuspendLayout();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -72,6 +74,7 @@
             // panel1
             // 
             tableLayoutPanel1.SetColumnSpan(panel1, 3);
+            panel1.Controls.Add(currentplayerLabel);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
@@ -168,6 +171,15 @@
             button9.UseVisualStyleBackColor = true;
             button9.Click += buttonClick;
             // 
+            // currentplayerLabel
+            // 
+            currentplayerLabel.AutoSize = true;
+            currentplayerLabel.Location = new Point(362, 54);
+            currentplayerLabel.Name = "currentplayerLabel";
+            currentplayerLabel.Size = new Size(38, 15);
+            currentplayerLabel.TabIndex = 0;
+            currentplayerLabel.Text = "label1";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -177,6 +189,8 @@
             Name = "Form1";
             Text = "Form1";
             tableLayoutPanel1.ResumeLayout(false);
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -193,5 +207,6 @@
         private Button button7;
         private Button button8;
         private Button button9;
+        private Label currentplayerLabel;
     }
 }
